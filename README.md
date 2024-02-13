@@ -4,14 +4,18 @@
 
 # Using Backpropagation to Reconstruct Missing Inputs of Neural Networks
 
-This repository contains the code for reconstructing missing input data to neural networks with backpropagation. 
-The method is inspired from [Roche et al. 2023](https://arxiv.org/abs/2308.10496). 
+This repository contains the code for reconstructing missing input data of neural networks via backpropagation. 
+The method is inspired by [Roche et al. 2023](https://arxiv.org/abs/2308.10496). 
 
-The idea is that the trained weights of a neural network can be used to reconstruct missing input data to the neural network, 
-by simply including the missing data in the gradient and optimize its values via backpropagation.
+The idea is that trained weights of a neural network can be used to reconstruct missing input data to the neural network, by simply including the missing data in the gradient and optimizing its values via backpropagation, while fixing the weights of the neural network. 
+
+To counter being captured in a local minimum during the optimization, multiple instances of the trained neural network are created and optimized. 
+The most promising candidate is then selected for final optimization. 
+
 
 ## Experimental Evaluation
-We evaluate the results with the MNIST dataset (a full empirical evaluation can be found the publication above)
+We evaluate the results with the MNIST dataset.
+A full empirical evaluation can be found the publication above.
 Therefore, we trained a simple Autoencoder on the complete MNIST dataset. 
 We then masked single samples with a zero-tensor, as missing values.
 
