@@ -16,7 +16,7 @@ The most promising candidate is then selected for final optimization.
 ## Experimental Evaluation
 We evaluate the results with the MNIST dataset.
 A full empirical evaluation can be found the publication above.
-Therefore, we trained a simple Autoencoder on the complete MNIST dataset. 
+For our evaluation, we trained a simple Autoencoder on the complete MNIST dataset. 
 We then masked single samples with a zero-tensor, as missing values.
 
 **Sample & Masked Sample**
