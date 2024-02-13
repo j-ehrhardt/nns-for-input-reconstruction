@@ -9,7 +9,7 @@ The method is inspired by [Roche et al. 2023](https://arxiv.org/abs/2308.10496).
 
 The idea is that trained weights of a neural network can be used to reconstruct missing input data to the neural network, by simply including the missing data in the gradient and optimizing its values via backpropagation, while fixing the weights of the neural network. 
 
-To counter being captured in a local minimum during the optimization, multiple instances of the trained neural network are created and optimized. 
+We extend Roche et al's approach by instantiating multiple neural network instances. This allows us to counter being captured in a local minimum during the optimization.
 The most promising candidate is then selected for final optimization. 
 
 
